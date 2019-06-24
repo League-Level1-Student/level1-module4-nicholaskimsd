@@ -100,14 +100,14 @@ frame.dispose();
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
-
+frame = new JFrame();
 		// 6. Set the frame to visible
 frame.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
 		 frame.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-		 frame.setName("BOB");
+		 frame.setTitle("Simon Says");
 		// 9. Pack the frame
 		 frame.pack();
 		// 10. Set the defaultCloseOperation of your frammmmmeeeeeee to
