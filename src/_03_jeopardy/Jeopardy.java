@@ -141,7 +141,7 @@ frame.add(quizPanel);
 		thirdButton.setText("");
 		}
 		else if(buttonPressed == fourthButton) {
-			askQuestion("What is the atomic mass of tungsten","183.84 amu", 1000 );
+			askQuestion("What is the atomic mass of tungsten","183.84 ", 1000 );
 			fourthButton.setText("");
 		}
 		}
