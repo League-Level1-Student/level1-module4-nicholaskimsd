@@ -20,6 +20,7 @@ import javax.swing.JLabel;
 /**
  * We’re going to make a slideshow of cool optical illusions. When the user
  * clicks on an illusion, a new one will be loaded.
+ * 
  * @param <mousePressed>
  **/
 
@@ -37,14 +38,12 @@ public class BookOfIllusions<mousePressed> extends MouseAdapter {
 
 		// 5. make a variable to hold the location of your image. e.g. "illusion.jpg"
 		String image = "illusions.jpg";
-		String image1 = "ilussions 2.jpg";
+		String image1 = "illusions 2.jpg";
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
-		getLabelFromComputer();{
-			JLabel label = new JLabel();
-			return newJLabel("label");
-		}
-		JLabel  label = getLabelFromComputer();
-		 ((Object) label).loadImageFromComputer("image", "image1");
+		JLabel label = new JLabel ();
+		label = loadImageFromComputer(image);
+		label = loadImageFromComputer(image1);
+		
 		// 7. use the "loadImage..." methods below to initialize your JLabel
 
 		// 8. add your JLabel to the frame
@@ -55,26 +54,16 @@ public class BookOfIllusions<mousePressed> extends MouseAdapter {
 
 		// 10. add a mouse listener to your frame (hint: use *this*)
 		frame.addMouseListener(this);
-	}
-
-	private Object newJLabel(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private JLabel getLabelFromComputer() {
-		return null;
-		// TODO Auto-generated method stub
-		
+		return label;
 	}
 
 	public void mousePressed(MouseEvent e) {
 		// 11. Print "clicked!" to the console when the mouse is pressed
-		mousePressed pressed = (mousePressed) e.getSource();
-		
-		if(pressed==pressed) {
+		//mousePressed pressed = (mousePressed) e.getSource();
+		//if(pressed==e) {
 			System.out.println("Clicked");
-		}
+		//}
+		
 		// 12. remove everything from the frame that was added earlier
 		frame.removeAll();
 		// 13. load a new image like before (this is more than one line of code)
