@@ -1,4 +1,5 @@
 package _07_fortune_teller;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /*
@@ -13,7 +14,9 @@ public class FortuneTellerRunner {
        }
     
     static void begin() {
-      	 // Welcome the user. Give them a hint for the secret location.
+    	JOptionPane.showMessageDialog(null, "Hello There, welcome to the creepy fortune teller she will tell you your fortune "
+      			+ "its cool, just continue on and listen to her, or you die.  By the way crystal balls are nice for secret locations.  BYEE");
+      	
 
     }
 }
