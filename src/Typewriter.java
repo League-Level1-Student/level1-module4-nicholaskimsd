@@ -17,7 +17,7 @@ public class Typewriter implements KeyListener {
 	JPanel panel = new JPanel();
 
 	public static void main(String[] args) {
-		
+
 	}
 
 	char generateRandomLetter() {
@@ -25,12 +25,12 @@ public class Typewriter implements KeyListener {
 		return (char) (r.nextInt(26) + 'a');
 	}
 
-	char currentLetter;
-	 currentLetter=label.getText().charAt(0);
+	char currentLetter = label.getText().charAt(0);
+
 	public void runner() {
 		panel.add(label);
 		frame.add(panel);
-		
+
 		frame.setVisible(true);
 		char letter = generateRandomLetter();
 		label.setText(Character.toString(letter));
@@ -49,15 +49,15 @@ public class Typewriter implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+
 		if (e.getKeyChar() == label.getText().charAt(0)) {
-			System.out.println("You pressed the letter "+currentLetter+ ". You got it right");
+			System.out.println("You pressed the letter " + currentLetter + ". You got it right");
 			panel.setBackground(Color.GREEN);
 		}
 
 		else {
 			panel.setBackground(Color.RED);
-			System.out.println("You pressed the letter "+currentLetter+".  You got it wrong" );
+			System.out.println("You pressed the letter " + currentLetter + ".  You got it wrong");
 		}
 
 		char hi = generateRandomLetter();
@@ -70,15 +70,16 @@ public class Typewriter implements KeyListener {
 		// TODO Auto-generated method stub
 
 	}
+
 	Date timeAtStart = new Date();
-    
+
 	private void showTypingSpeed(int numberOfCorrectCharactersTyped) {
-	    Date timeAtEnd = new Date();
-	    long gameDuration = timeAtEnd.getTime() - timeAtStart.getTime();
-	    long gameInSeconds = (gameDuration / 1000) % 60;
-	    double charactersPerSecond = ((double) numberOfCorrectCharactersTyped / (double) gameInSeconds);
-	    int charactersPerMinute = (int) (charactersPerSecond * 60);
-	    JOptionPane.showMessageDialog(null, "Your typing speed is " + charactersPerMinute + " characters per minute.");
-	} 
+		Date timeAtEnd = new Date();
+		long gameDuration = timeAtEnd.getTime() - timeAtStart.getTime();
+		long gameInSeconds = (gameDuration / 1000) % 60;
+		double charactersPerSecond = ((double) numberOfCorrectCharactersTyped / (double) gameInSeconds);
+		int charactersPerMinute = (int) (charactersPerSecond * 60);
+		JOptionPane.showMessageDialog(null, "Your typing speed is " + charactersPerMinute + " characters per minute.");
+	}
 
 }
