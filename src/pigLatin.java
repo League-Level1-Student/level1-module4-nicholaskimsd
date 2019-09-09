@@ -34,14 +34,11 @@ public class pigLatin implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		JButton pressed = (JButton) e.getSource();
 		if (button == pressed) {
-			System.out.println("Bob");
-			PigLatinTranslator translator = new PigLatinTranslator();
-
+			
+			
 			String field = textfield.getText();
-			PigLatinTranslator.pigWord(field);
-			translator.translate(field);
-
-			PigLatinTranslator.firstVowel(field);
+			String hi = PigLatinTranslator.pigWord(field);
+			textfield1.setText(hi);
 		}
 	}
 }
