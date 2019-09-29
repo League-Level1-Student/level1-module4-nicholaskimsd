@@ -18,12 +18,15 @@ public class whackaMole implements ActionListener {
 	
 
 	void drawButtons(int randumb) {
-
+		
 		for (int i = 0; i < 30; i++) {
 			JButton coolButton = new JButton();
 			coolButton.addActionListener(this);
+			if(i == randumb) {
+				coolButton.setText("mole");
+			}
 			panel.add(coolButton);
-
+			
 		}
 	}
 
@@ -32,14 +35,24 @@ public class whackaMole implements ActionListener {
 		Random randy = new Random(); 
 		int moleLocation = randy.nextInt(30);
 	drawButtons(moleLocation);
+	button.setText("mole");
 		frame.setVisible(true);
 		frame.setSize(300, 300);
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
-}
+	@Override
+	public void actionPerformed(ActionEvent f) {
+		JButton pressed = (JButton) f.getSource();
+		if(pressed.getText().equals("mole")) {
+			frame.dispose();
+		}
+		else {
+			
+			}
+		}
+	
+		}
+	
+
+
