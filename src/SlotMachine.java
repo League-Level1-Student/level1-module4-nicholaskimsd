@@ -60,7 +60,7 @@ JLabel label = new JLabel();
 			panel.add(createLabelImage("orange.jpg"));
 		}
 		if(reel1==2) {
-			panel.add(createLabelImage("seven-706891_960_720.jpg"));
+			panel.add(createLabelImage("7.jpeg"));
 		}
 		if(reel2==0) {
 			panel.add(createLabelImage("cherries.jpg"));
@@ -70,7 +70,7 @@ JLabel label = new JLabel();
 			panel.add(createLabelImage("orange.jpg"));
 		}
 		if(reel2==2) {
-			panel.add(createLabelImage("seven-706891_960_720.jpg"));
+			panel.add(createLabelImage("7.jpeg"));
 		}
 		
 		
@@ -81,7 +81,7 @@ JLabel label = new JLabel();
 			panel.add(createLabelImage("orange.jpg"));
 		}
 		if(reel3==2) {
-			panel.add(createLabelImage("seven-706891_960_720.jpg"));
+			panel.add(createLabelImage("7.jpeg"));
 		}
 		
 		

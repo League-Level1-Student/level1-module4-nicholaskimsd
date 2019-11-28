@@ -25,7 +25,7 @@ public class Typewriter implements KeyListener {
 		return (char) (r.nextInt(26) + 'a');
 	}
 
-	char currentLetter = label.getText().charAt(0);
+	char currentLetter = label.getText().charAt(1);
 
 	public void runner() {
 		panel.add(label);
@@ -73,6 +73,7 @@ public class Typewriter implements KeyListener {
 
 	Date timeAtStart = new Date();
 
+	@SuppressWarnings("unused")
 	private void showTypingSpeed(int numberOfCorrectCharactersTyped) {
 		Date timeAtEnd = new Date();
 		long gameDuration = timeAtEnd.getTime() - timeAtStart.getTime();

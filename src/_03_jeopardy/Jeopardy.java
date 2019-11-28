@@ -37,6 +37,7 @@ public class Jeopardy implements ActionListener {
 	private int buttonCount = 0;
 	private AudioClip sound;
 
+	@SuppressWarnings("deprecation")
 	public void run() {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,6 +49,7 @@ public class Jeopardy implements ActionListener {
 		// 2. Give your frame a title
 		frame.setTitle("Jepordy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
+		@SuppressWarnings("unused")
 		JPanel panel = new JPanel();
 		createHeader("panel");
 		// 4. Add the header component to the quizPanel
@@ -132,7 +134,7 @@ public class Jeopardy implements ActionListener {
 			askQuestion("What is the horse power of a regular ferrari", "769", 800);
 			thirdButton.setText("");
 		} else if (buttonPressed == fourthButton) {
-			askQuestion("What is the atomic mass of tungsten", "183.84 ", 1000);
+			askQuestion("What is the atomic mass of tungsten", "183.84", 1000);
 			fourthButton.setText("");
 		}
 	}
